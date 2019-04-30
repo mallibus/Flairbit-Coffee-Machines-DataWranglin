@@ -57,6 +57,11 @@ Serial | YYYY | MM | dd | hh:mm:ss | Week | Model | Errorcode | Critical
 ### Root cause analysis
 * Find correlations between machine usage (counters and cleanings misses) and faults
 
+## Code
+The code in the repo is in the format of three Jupyter Notebooks
+* **Exploration.ipynb**  :  first file to look at, it includes data esploration of the dataset (please note that the dataset itslef is not in the repo! you have to look into the dataset presentation [here](http://www.datascienceseed.com/2019/02/10/dataset-challenge-hands-on-1-flairbit-coffee-machines-rulex-churn-service/) and find the slide with the link to a dropbox folder. The reason for this is to spread knowledge of the DataScienceSeed community and events. This notebook also takes care of generating intermediate dataset files (the .csv files in the repo) to be used for the forecast. 
+* **LGBM Tabular 03_01_Fault_Clean_Count.ipynb** : failure forecast based on [LightGBM](https://lightgbm.readthedocs.io/en/latest/) algorithm. There is also some data rearranging to play with different time windows of data in the features side and in the target side. The results are fairly good: the models can predict with 85% of f1 score a failure of a machine in the next 5 days. There is also some feature interpretation based on [SHAP](https://shap.readthedocs.io/en/latest/).
+* **Fastai Tabular Paperspace.ipynb** : failure forecast based on deep learning, using [Fast.ai tabular_learner](https://docs.fast.ai/tabular.data.html). I attempted to apply what is described in [Lessno4 of Fast.ai MOOC 2018 edition](https://course.fast.ai/videos/?lesson=4). The results are worst than LGBM, but this is just a dumb attempt!
 ## Credits
 
 Thanks to [Flairbit](http://www.flairb.it/) for providing this dataset to the [DataScienceSeed](http://www.datascienceseed.com/) 
