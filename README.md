@@ -6,6 +6,10 @@ http://www.datascienceseed.com/2019/02/10/dataset-challenge-hands-on-1-flairbit-
 
 Dataset details and download instructions are at the link above, in the Flairbit section of the event.
 
+Slides presented at the meetup on may 2019
+
+http://www.datascienceseed.com/wp-content/uploads/2019/05/Flairbit-Challenge-Meetup-Slides.pdf
+
 ## The dataset
 * Data related to professional coffe machines
 * Dataset categories:
